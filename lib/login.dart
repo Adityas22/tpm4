@@ -52,10 +52,4 @@ class Login extends StatelessWidget {
       ),
     );
   }
-
-  // Fungsi untuk menyimpan status login
-  // Future<void> _saveLoginStatus(bool isLoggedIn) async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   await prefs.setBool('isLoggedIn', isLoggedIn);
-  // }
 }
