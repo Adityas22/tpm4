@@ -19,7 +19,7 @@ class _HitungSegitigaState extends State<HitungSegitiga> {
     double tinggi = double.tryParse(_tinggiController.text) ?? 0;
 
     double luas = 0.5 * alas * tinggi;
-    double keliling = alas + (2 * sqrt(pow(alas / 2, 2) + pow(tinggi, 2)));
+    double keliling = alas + tinggi + (sqrt(pow(alas, 2) + pow(tinggi, 2)));
 
     setState(() {
       _luas = luas;
@@ -47,7 +47,7 @@ class _HitungSegitigaState extends State<HitungSegitiga> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hitung Luas dan Keliling Segitiga'),
+        title: Text('Hitung Luas dan Keliling Segitiga Siku-siku'),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
