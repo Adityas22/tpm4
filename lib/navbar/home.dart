@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_layout/logout.dart';
 import 'package:mobile_layout/menu/anggota.dart';
 import 'package:mobile_layout/menu/bilPrima.dart';
+import 'package:mobile_layout/menu/favorite.dart';
 import 'package:mobile_layout/menu/hitungSegitigta.dart';
+import 'package:mobile_layout/menu/situsRekomendasi.dart';
 import 'package:mobile_layout/navbar/help.dart';
 import 'package:mobile_layout/navbar/stopwatch.dart';
 
@@ -51,12 +54,20 @@ class Home extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Navigate to Daftar Situs Rekomendasi
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ListEcommerce()),
+                );
               },
               child: const Text('Daftar Situs Rekomendasi'),
             ),
             ElevatedButton(
               onPressed: () {
                 // Navigate to Favorite
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Favorite()),
+                );
               },
               child: const Text('Favorite'),
             ),
@@ -110,6 +121,10 @@ class Home extends StatelessWidget {
             );
           } else if (index == 3) {
             // Lakukan proses logout
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => LogoutPage()),
+            );
           }
         },
       ),
