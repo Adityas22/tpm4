@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mobile_layout/navbar/home.dart';
-
-// void main() async {
-//   // WidgetsFlutterBinding.ensureInitialized();
-//   // await SharedPreferences.getInstance();
-//   runApp(Login());
-// }
 
 class Login extends StatelessWidget {
   const Login({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController emailController = TextEditingController();
+    TextEditingController usernameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
@@ -27,7 +20,7 @@ class Login extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
-              controller: emailController,
+              controller: usernameController,
               decoration: InputDecoration(
                 labelText: 'Username',
               ),
